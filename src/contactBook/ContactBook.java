@@ -2,6 +2,13 @@ package contactBook;
 
 import contactBook.Contact;
 
+/**
+ * @author Pedro Caldeirao - 57945
+ * @author Pedro Perdigao - 58165
+ * @author Daniel Silva - 57548
+ */
+
+
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -58,6 +65,10 @@ public class ContactBook {
     //Pre: name != null && hasContact(name)
     public void setEmail(String name, String email) {
         contacts[searchIndex(name)].setEmail(email);
+    }
+
+    public String getName(int phone) {
+        return contacts[searchPhone(phone)].getName();
     }
 
     //Check if exist two contacts wih the same phone number
